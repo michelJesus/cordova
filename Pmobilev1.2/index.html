@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pmobile</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<header class="header">
+			<input type="image" src="img/home.png" alt="Home" class="icone-48x48 float-left">
+			<input type="image" src="img/voltar.png" alt="Voltar" class="icone-48x48 float-left">
+			<img width="160" height="48" src="img/logotipo-tecnicon-white.png" alt="TECNICON Sistemas Gerenciais" />
+			<input type="image" src="img/configuracao.png" alt="Configuração" class="icone-48x48 float-right">
+		</header>
+
+		<div class="content">
+			<div id="divLogin" class="login" style="display: block">
+				<div class="saudacao">
+					<span class="txt-saudacao">Seja bem vindo!</span>
+				</div>	
+				
+				<div class="div-form">
+					<form>
+						<span>Usuário:</span>
+						<input type="text">
+						
+						<span>Senha:</span>
+						<input type="text">
+						
+						<input type="button" value="Entrar" onclick="mostraInputList()">
+					</form>
+				</div>	
+			</div>
+
+			<div id="inputList" class="div-form" style="display: none">
+				<form>
+					<input type="button" value="Cadastrar pedido" onclick="mostraInputList5()" />
+					<input type="button" value="Cadastro de cliente" />
+					<input type="button" value="Pedidos do dia" />
+					<input type="button" value="Consultar produtos" />
+					<input type="button" value="Consultar vendas" onclick="mostraInputList2()"/>
+					<input type="button" value="Sincronizar" onclick="mostraInputList4()" />
+				</form>	
+			</div>
+
+			<div id="inputList2" class="div-form" style="display: none">
+				<form>
+					<input type="button" value="Alterar vendedor" onclick="mostraInputList3()">
+					<input type="button" value="Alterar servidor">
+				</form>	
+			</div>
+
+			<div id="inputList3" class="form" style="display: none">
+				<form>
+					<span>Vendedor:</span>
+					<input type="text">
+					<span>Senha:</span>
+					<input type="text">
+					<input type="button" value="Acessar">
+				</form>	
+			</div>
+
+			<div id="inputList4" class="form" style="display: none">
+				<form>
+					<span>Servidor:</span>
+					<input type="text">
+					<span>Porta:</span>
+					<input type="text">
+					<input type="button" value="Salvar">
+				</form>	
+			</div>
+
+			<div id="inputList5" class="input-list" style="display: none">
+				<form>
+					<input type="button" value="Alegrete" >
+					<input type="button" value="Guria">
+					<input type="button" value="Panambi">
+					<input type="button" value="Passo Fundo">
+					<input type="button" value="Rio Branco">
+					<input type="button" value="Santo Rosa">
+					<input type="button" value="Santo Angelo">
+					<input type="button" value="São Gabriel">
+					<input type="button" value="Três de Maio">
+					<input type="button" value="Abrao Kochhann Ltda">
+					<input type="button" value="Benedetti & Benedetti Ltda" onclick="mostraInputList6()">
+					<input type="button" value="Vacaria">
+				</form>	
+			</div>
+
+			<div id="inputList6" class="form" style="display: none">
+				<input type="image" src="img/menu.png" alt="Menu" class="icone-48x48 float-left" onclick="mostraMenuOpcao()">
+				<span class="titulo">Benedetti & Benedetti Ltda</span><br />
+
+				<nav id="menuOpcao" class="menu-opcao">
+					<input type="button" value="Outras informações" onclick="mostraInputList7()">
+					<input type="button" value="Pagos">
+					<input type="button" value="Pendentes">
+					<input type="button" value="Históricos">
+					<input type="button" value="Novo Pedido" onclick="mostraInputList8()">
+				</nav>
+
+				<div class="form-info-cliente">
+					<form>
+						<span>Endereço:</span>
+						<input type="text">
+						
+						<span>Número:</span>
+						<input type="text">
+						
+						<span>Bairro:</span>
+						<input type="text">
+						
+						<span>Complemento:</span>
+						<input type="text">
+						
+						<span>Cidade:</span>
+						<input type="text">
+						
+						<span>Telefone:</span>
+						<input type="text">
+						
+						<span>CNPJ:</span>
+						<input type="text">
+						
+						<span>Código SAC:</span>
+						<input type="text">
+						
+						<input type="button" value="Obervações" class="cor-neutra">
+					</form>	
+				</div>	
+			</div>
+
+			<div id="inputList7" class="form" style="display: none">
+				<div class="form-info-cliente">
+					<form>
+						<span>Código:</span>
+						<input type="text">
+
+						<span>Data:</span>
+						<input type="text">
+
+						<span>Cliente:</span>
+						<input type="text">
+
+						<span>Tipo de operação:</span>
+						<select>
+	  						<option value="operacao1">Operação 1</option>
+	  						<option value="operacao2">Operação 2</option>
+	  						<option value="operacao3">Operação 3</option>
+	  						<option value="operacao4">Operação 4</option>
+						</select>			
+
+						<span>Forma de pagamento:</span>
+						<select>
+	  						<option value="formapagamento1">Forma de pagamento 1</option>
+	  						<option value="formapagamento2">Forma de pagamento 2</option>
+	  						<option value="formapagamento3">Forma de pagamento 3</option>
+	  						<option value="formapagamento4">Forma de pagamento 4</option>
+						</select>
+
+						<span>Prazo:</span>
+						<select>
+	  						<option value="prazo1">Prazo 1</option>
+	  						<option value="prazo2">Prazo 2</option>
+	  						<option value="prazo3">Prazo 3</option>
+	  						<option value="prazo4">Prazo 4</option>
+						</select>
+
+						<span>Faturamento:</span>
+						<input type="date">
+
+						<span>Obervações:</span>
+						<textarea rows="2"></textarea>
+					</form>	
+				</div>
+				<input type="button" value="Confirmar">
+				<input type="button" value="Sair" onclick="mostraInputList7()">
+			</div>
+
+			<div id="inputList8" class="form" style="display: none;">
+				<div class="form-info-cliente">
+					<form>
+						<span>Escolher produto:</span>
+						<select>
+							<script>
+								for (var i = 0; i < 14; i++) {
+									document.write("<option value='produto " + i + "'>Prazo " + i + "</option>");
+								}
+							</script>
+						</select>
+
+						<input type="text" disabled>
+						<span>Valor:</span>
+						<input type="text">
+						<span>Desconto:</span>
+						<input type="text">
+						<span>Quantidade:</span>
+						<input type="text">
+						<br />
+						<input type="checkbox"><span>Adicionar</span> 
+
+						<table>
+							<tr>
+								<th>Cód</th>
+								<th>Qtd</th>
+								<th>Desc %</th>
+								<th>Valor</th>
+							</tr>
+							<tr>
+								<td>F. TRIGO T1 FLOCOS DE NEVE 1kg</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>1020004</td>
+								<td>90</td>
+								<td>90</td>
+								<td>R$ 1,78</td>
+							</tr>
+							<tr>
+								<th>Peso: 90.0</td>
+								<th colspan="3">Total: R$ 16,02</td>
+							</tr>	
+						</table>
+					</form>	
+				</div>
+				<!-- input type="button" value="Voltar" -->
+				<input type="button" value="Histórico" onclick="mostraInputList9()">
+				<input type="button" value="Salvar" onclick="mostraPopup()">
+			</div>
+
+			<div id="inputList9" class="form" style="display: none">
+				<input type="image" src="img/fechar.png" alt="Fechar" class="icone-48x48 float-left" onclick="mostraInputList9()" />
+				<span class="titulo">Histórico de Pedido</span><br />
+
+				<nav id="menuOpcao" class="menu-opcao">
+					<input type="button" value="Outras informações" onclick="mostraInputList7()">
+					<input type="button" value="Pagos">
+					<input type="button" value="Pendentes">
+					<input type="button" value="Históricos">
+					<input type="button" value="Novo Pedido" onclick="mostraInputList8()">
+				</nav>
+
+				<div class="form-info-cliente">
+					<table>
+						<tr>
+							<td>Pedido: 001410</td>
+						</tr>	
+						<tr>
+							<td>20/08/2014 - R$ 16.856,96 - 101.591,80 kg</td>
+						</tr>
+						<tr>
+							<td>Venda</td>
+						</tr>
+						<tr>
+							<td>Importado em: 19/08/2014 - 13:20:00</td>
+						</tr>
+						<tr>
+							<td>Agendado para: 21/08/2014</td>
+						</tr>
+						<tr>
+							<td>A PRAZO 28 DIAS - BANCO</td>
+						</tr>		
+					</table>
+
+					<div class="table-info">
+						<table>
+							<tr>
+								<th>Código</th>
+								<th>Descrição</th>
+								<th>Qtd</th>
+								<th>Desc(%)</th>
+								<th>Valor Un</th>
+								<th>TOTAL</th>
+							</tr>	
+							<script>
+								for(var i = 0; i < 7; i++) {
+									document.write(	"<tr>" + 
+													"<td>0000000</td>"  +
+												   	"<td>F. TRIGO T1 FLOCOS DE NEVE 1kg</td>" +
+ 													"<td>500</td>" +
+ 													"<td></td>" +
+ 													"<td>1,60</td>" +
+ 													"<td>800,00</td>" +
+ 													"</tr>" );
+								}
+							</script>
+						</table>
+					</div>
+					
+					<hr />	
+
+					<table>
+						<tr>
+							<td>Pedido: 001410</td>
+						</tr>	
+						<tr>
+							<td>20/08/2014 - R$ 16.856,96 - 101.591,80 kg</td>
+						</tr>
+						<tr>
+							<td>Venda</td>
+						</tr>
+						<tr>
+							<td>Importado em: 19/08/2014 - 13:20:00</td>
+						</tr>
+						<tr>
+							<td>Agendado para: 21/08/2014</td>
+						</tr>
+						<tr>
+							<td>A PRAZO 28 DIAS - BANCO</td>
+						</tr>		
+					</table>
+
+					<div class="table-info">
+						<table>
+							<tr>
+								<th>Código</th>
+								<th>Descrição</th>
+								<th>Qtd</th>
+								<th>Desc(%)</th>
+								<th>Valor Un</th>
+								<th>TOTAL</th>
+							</tr>	
+							<script>
+								for(var i = 0; i < 7; i++) {
+									document.write(	"<tr>" + 
+													"<td>0000000</td>"  +
+												   	"<td>F. TRIGO T1 FLOCOS DE NEVE 1kg</td>" +
+ 													"<td>500</td>" +
+ 													"<td></td>" +
+ 													"<td>1,60</td>" +
+ 													"<td>800,00</td>" +
+ 													"</tr>" );
+								}
+							</script>
+						</table>
+					</div>
+					<hr />
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="txt-empresa">TECNICON Sistemas Gerenciais - Matriz</span>
+		</footer>	
+	</div>
+</body>
+</html>
